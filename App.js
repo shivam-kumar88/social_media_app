@@ -1,5 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import * as firebase from 'firebase'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDcg1l13IytAHcZZhSNwsjlv1n64BZ81gk",
+  authDomain: "social-media-app-d1121.firebaseapp.com",
+  projectId: "social-media-app-d1121",
+  storageBucket: "social-media-app-d1121.appspot.com",
+  messagingSenderId: "65956013471",
+  appId: "1:65956013471:web:2c041566170a02b24249aa",
+  measurementId: "G-W1DXYHXWN0"
+};
+
+if(firebase.app.length === 0){
+  firebase.initializeApp(firebaseConfig)
+}
+
 import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Landingscreen from './components/authentication/landing'
