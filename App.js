@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-W1DXYHXWN0"
 };
 
-if(firebase.app.length === 0){
+if(firebase.apps.length === 0){
   firebase.initializeApp(firebaseConfig)
 }
 
