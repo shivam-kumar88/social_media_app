@@ -21,6 +21,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Landingscreen from './components/authentication/landing'
 import registerScreen from './components/authentication/register'
+import loginScreen from './components/authentication/login'
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
       <Stack.Navigator initialRouteName = "Login">
         <Stack.Screen name="Login/Register page" component = {Landingscreen} option = {{headerShown: false}}/>
         <Stack.Screen name="register" component = {registerScreen}/>
+        <Stack.Screen name="login" component = {loginScreen}/>
       </Stack.Navigator> 
     </NavigationContainer>
     

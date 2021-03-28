@@ -11,12 +11,12 @@ export default function Landimg({navigation}) {
             <Button
             title = "Register"
             onPress = {() => navigation.navigate("register")}
-           // color = 'dodgerblue'
+            color = 'dodgerblue'
             />
 
             <Button
-            title = "Login"
-            onPress = {() => navigation.navigate("Login")}
+            title = "login"
+            onPress = {() => navigation.navigate("login")}
             color = 'orange'/>
             </ImageBackground>
         </View>
