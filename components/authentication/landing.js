@@ -6,7 +6,7 @@ const img = { uri: "https://images.unsplash.com/photo-1591525167583-855b70ee0c4f
 
 export default function Landimg({navigation}) {
     return (
-        <View style = {{flex:1, justifyContent:'center'}}>
+        <View style = {{ flex: 1, justifyContent: 'center' }}>
             <ImageBackground source = {img} style = {{flex:1, flexDirection: "column"}}>
             <Button
             title = "Register"
