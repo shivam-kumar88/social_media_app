@@ -54,7 +54,7 @@ export class App extends Component {
     const {loaded, loggedin} = this.state;
     if(!loaded){
       return(
-        <View style={{ flex: 1, justifyContent: 'center' }}>
+        <View style={{ flex: 1, justifyContent: 'centre' }}>
           <Text>
           loading.....
           </Text>
@@ -73,12 +73,12 @@ export class App extends Component {
       )
     }
     return(
-      <View style={{ flex: 1, justifyContent: 'center' }}>
+      <View style={{ flex: 1, justifyContent: 'centre' }}>
         <Text>logged in.......</Text>
         <Button 
         title = "logout"
         onPress = {() => (loggedin = false)}
-        />
+        />s
       </View>
     )
   }
