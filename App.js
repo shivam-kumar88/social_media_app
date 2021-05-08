@@ -31,7 +31,7 @@ import Landingscreen from './components/authentication/landing'
 import registerScreen from './components/authentication/register'
 import loginScreen from './components/authentication/login'
 
-import mainscreen from './components/main'
+import Mainscreen from './components/main'
 
 const Stack = createStackNavigator();
 
@@ -82,13 +82,7 @@ export class App extends Component {
       )
     }
     return(
-      <View style={{ flex: 1, justifyContent: 'centre' }}>
-        <Text>logged in.......</Text>
-        <Button 
-        title = "logout"
-        onPress = {() => (loggedin = false)}
-        />s
-      </View>
+      <Mainscreen/>
     )
   }
 }
