@@ -3,6 +3,13 @@ import React, {Component} from 'react';
 import * as firebase from 'firebase'
 import {View, Text, Button} from 'react-native'
 
+import {provider} from 'react-redux'
+import {createStore, applyMiddleware} from 'redux'
+import rootReducer from './redux/reducers'
+import thunk from 'redux-thunk'
+
+const store = createStore(rootReducer, applyMiddleware(thunk))
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDcg1l13IytAHcZZhSNwsjlv1n64BZ81gk",
