@@ -82,7 +82,10 @@ export class App extends Component {
       )
     }
     return(
-      <Mainscreen/>
+      <provider store = {store}>
+        <Mainscreen/>
+      </provider>
+      
     )
   }
 }
