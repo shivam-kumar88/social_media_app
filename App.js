@@ -31,6 +31,8 @@ import Landingscreen from './components/authentication/landing'
 import registerScreen from './components/authentication/register'
 import loginScreen from './components/authentication/login'
 
+import mainscreen from './components/main'
+
 const Stack = createStackNavigator();
 
 export class App extends Component {
