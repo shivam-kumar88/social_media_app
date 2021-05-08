@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import * as firebase from 'firebase'
 import {View, Text, Button} from 'react-native'
 
-import {provider} from 'react-redux'
+import {Provider} from 'react-redux'
 import {createStore, applyMiddleware} from 'redux'
 import rootReducer from './redux/reducers'
 import thunk from 'redux-thunk'
@@ -82,9 +82,9 @@ export class App extends Component {
       )
     }
     return(
-      <provider store = {store}>
+      <Provider store = {store}>
         <Mainscreen/>
-      </provider>
+      </Provider>
       
     )
   }
