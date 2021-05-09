@@ -1,35 +1,26 @@
 import React, { Component } from 'react'
-import {View, Text, Button} from 'react-native'
 import { State } from 'react-native-gesture-handler'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchUser } from '../redux/action/index'
+
+import FeedScreen from './Main/Feed'
+
+const Tab = createBottomTabNavigator();
 
 export class main extends Component {
     componentDidMount() {
         this.props.fetchUser();
     }
     render() {
-        const {currentUser} = this.props;
-        if(currentUser == undefined){
-            return(
-                <View></View>
-            )
-        }
-        else{
-            console.log('undefined')
-        }
-            console.log(currentUser)
+        
         return (
-            
-            <View style={{ flex: 1, justifyContent: 'centre' }}>
-            <Text>{currentUser.name} is logged in.......</Text>
-            <Button 
-            title = "logout"
-            onPress = {() => (loggedin = false)}
-            />
-          </View>
+            <Tab.Navigator>
+                <Tab.Screen name="Feed" component={FeedScreen} />
+               // <Tab.Screen name="Settings" component={SettingsScreen} />
+            </Tab.Navigator>
         )
     }
 }
