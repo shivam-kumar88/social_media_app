@@ -32,6 +32,7 @@ import registerScreen from './components/authentication/register'
 import loginScreen from './components/authentication/login'
 
 import Mainscreen from './components/main'
+import AddScreen from './components/Main/Add'
 
 const Stack = createStackNavigator();
 
@@ -74,7 +75,7 @@ export class App extends Component {
       return(
         <NavigationContainer>
           <Stack.Navigator initialRouteName = "Login">
-            <Stack.Screen name="Login/Register page" component = {Landingscreen} option = {{headerShown: false}}/>
+            <Stack.Screen name="Login/Register page" component = {Landingscreen} options = {{headerShown: false}}/>
             <Stack.Screen name="register" component = {registerScreen}/>
             <Stack.Screen name="login" component = {loginScreen}/>
           </Stack.Navigator> 
@@ -85,7 +86,8 @@ export class App extends Component {
       <Provider store = {store}>
         <NavigationContainer>
           <Stack.Navigator initialRouteName = "Main">
-            <Stack.Screen name="Main" component = {Mainscreen} option = {{headerShown: false}}/>
+            <Stack.Screen name="Main" component = {Mainscreen} options = {{headerShown: false}}/>
+            <Stack.Screen name="Add" component = {AddScreen}/>
           </Stack.Navigator> 
         </NavigationContainer>
       </Provider>

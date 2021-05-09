@@ -10,10 +10,14 @@ import { fetchUser } from '../redux/action/index'
 import FeedScreen from './Main/Feed'
 import ProfileScreen from './Main/Profile'
 import ChatScreen from './Main/Chat'
-import AddScreen from './Main/Add'
+
 
 
 const Tab = createBottomTabNavigator();
+
+const EmptyScreen = () =>{
+    return(null)
+}
 
 export class main extends Component {
     componentDidMount() {
@@ -22,7 +26,7 @@ export class main extends Component {
     render() {
         
         return (
-            <Tab.Navigator>
+            <Tab.Navigator initialRouteName = "Feed">
                 <Tab.Screen name="Feed" component={FeedScreen}
                 options={{
                     tabBarIcon: ({ color, size }) => (
@@ -31,10 +35,16 @@ export class main extends Component {
                 }} />
                 
                 
-                <Tab.Screen name="Add" component={AddScreen}
+                <Tab.Screen name="Add file" component={EmptyScreen}
+                listeners = {({ navigation }) => ({
+                    tabPress: event =>{
+                        event.preventDefault();
+                        navigation.navigate("Add")
+                    }
+                })}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <MaterialCommunityIcons name="tag-plus" color={color} size={28} />
+                        <MaterialCommunityIcons name="plus" color={color} size={28} />
                       )
                 }} />
                 <Tab.Screen name="Chat" component={ChatScreen}
